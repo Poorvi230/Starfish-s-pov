@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+}
+.section {
+    height: 100vh;
+    padding: 10vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.morning { background-image: url('starfish.png');
+background-size: cover;
+background-position: center; background-repeat: no-repeat;}
+.mid-day { background-color: #20B2AA; }
+.afternoon { background-color: #DAA520; }
+.evening { background-color: #483D8B; }
+.night { background-color: #000080; color: white; }
+
+.sticker {
+    position: absolute;
+    z-index: 1;
+}
+h1, h2, p {
+    position: relative;
+    z-index: 10;
+}
+#grumpy-whale {
+    top: 30%; right: 5%; width: 350px;
+}
+.section h1, .section p, .section .sticker {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+.section.visible h1, .section.visible p, .section.visible .sticker {
+    opacity: 1;
+    transform: translateY(0);
+}
