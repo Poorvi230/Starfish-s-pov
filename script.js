@@ -9,3 +9,16 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => {
     observer.observe(section);
 });
+const musicBtn = document.getElementById('cute-music-btn');
+const bgMusic = document.getElementById('bg-music');
+let isPlaying = false;
+
+musicBtn.addEventListener('click', () => {
+    if (isPlaying) {
+        bgMusic.pause();
+        bgMusic.innerText = 'Playitt';
+    } else {
+        bgMusic.play();
+        musicBtn.innerText = 'Pause huh'
+    } isPlaying = !isPlaying
+});
