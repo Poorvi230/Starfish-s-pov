@@ -16,8 +16,12 @@ background-position: center; background-repeat: no-repeat;}
 .mid-day { background-color: #20B2AA; }
 .afternoon { background-color: #DAA520; }
 .evening { background-color: #483D8B; }
-.night { background-color: #000080; color: white; }
-
+.night {
+            background-image: url('night.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; }
 .sticker {
     position: absolute;
     z-index: 1;
@@ -38,3 +42,42 @@ h1, h2, p {
     opacity: 1;
     transform: translateY(0);
 }
+.glass-box {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 20px; width: 80%; max-width: 600px; margin: 5vh auto 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); position: relative; z-index: 10;
+}
+#chill-raft {
+    top: 60%; left: 60%; width: 350px; z-index: 3
+}
+#global-ray {
+   position: fixed; top: 35%; left: 4%; width: 600px; z-index: 5; pointer-events: none;
+}
+#night-bubbles {
+    bottom: 20%; left: 45%; width: 150px; opacity: 0.4;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.float-slow {
+    animation: float 4s ease-in-out infinite;
+}
+.float-fast {
+    animation: float 2s ease-in-out infinite;
+}
+.night {
+        background-image: url('night.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white; }
+        
+        #sleepy-starfish {
+        bottom: 10%;
+        right: 15%; 
+        width: 350px; 
+    }
